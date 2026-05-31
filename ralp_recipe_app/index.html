@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BcGold Restaurant</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="app-header">
+    <a href="#home" class="brand">
+      <span class="brand-emoji" aria-hidden="true">🍳</span>
+      <span class="brand-text">BcGold Restaurant</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#recipes" data-nav="recipes">Recipes</a>
+      <a href="#fridge" data-nav="fridge">My Fridge</a>
+      <a href="#orders" data-nav="orders">Orders</a>
+      <a href="#cart" data-nav="cart">Cart <span id="cart-count" class="badge" hidden>0</span></a>
+      <a href="#account" data-nav="account">Account</a>
+    </nav>
+    <div class="user-pill" id="user-pill" hidden>
+      <span id="user-pill-name">Guest</span>
+      <span class="coin-chip"><span aria-hidden="true">💰</span> <span id="user-pill-coins">0</span></span>
+    </div>
+  </header>
+
+  <!-- ===== Toast ===== -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- ===== Main views ===== -->
+  <main class="app-main">
+
+    <!-- Home -->
+    <section data-view="home" class="view" hidden>
+      <div class="hero">
+        <h1>Welcome to BcGold Restaurant</h1>
+        <p class="tagline">Learn recipes, cook with what you have, and order delicious food!</p>
+        <div class="hero-buttons">
+          <a href="#recipes" class="btn btn-primary">🍽️ View Recipes</a>
+          <a href="#fridge" class="btn btn-secondary">🥬 My Fridge</a>
+          <a href="#orders" class="btn btn-secondary">📦 My Orders</a>
+        </div>
+        <div class="hero-cards">
+          <div class="hero-card">
+            <div class="hero-card-icon">📚</div>
+            <h3>Recipe Library</h3>
+            <p>Browse our collection of delicious recipes</p>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">🥕</div>
+            <h3>Smart Fridge</h3>
+            <p>Tell us what you have, we suggest recipes</p>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">🛒</div>
+            <h3>Easy Ordering</h3>
+            <p>Order food with pretend money</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recipes -->
+    <section data-view="recipes" class="view" hidden>
+      <div class="view-header">
+        <h1>Recipe Library</h1>
+        <div class="search-filter">
+          <input type="text" id="recipe-search" placeholder="Search recipes..." class="search-input">
+          <select id="cuisine-filter" class="filter-select">
+            <option value="">All Cuisines</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Asian">Asian</option>
+            <option value="American">American</option>
+            <option value="Indian">Indian</option>
+          </select>
+        </div>
+      </div>
+      <div id="recipes-container" class="recipes-grid"></div>
+    </section>
+
+    <!-- Recipe Detail Modal -->
+    <div id="recipe-modal" class="modal" hidden>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <div id="recipe-detail-content"></div>
+      </div>
+    </div>
+
+    <!-- My Fridge -->
+    <section data-view="fridge" class="view" hidden>
+      <div class="view-header">
+        <h1>My Fridge</h1>
+        <p>Add ingredients to see what you can cook!</p>
+      </div>
+      <div class="fridge-section">
+        <div class="ingredient-input">
+          <input type="text" id="ingredient-input" placeholder="Enter ingredient..." class="input">
+          <button id="add-ingredient-btn" class="btn btn-primary">Add to Fridge</button>
+        </div>
+        <div id="fridge-items" class="ingredient-tags"></div>
+      </div>
+      <div class="suggestion-section">
+        <button id="suggest-recipe-btn" class="btn btn-primary btn-large">✨ Get AI Recipe Suggestion</button>
+        <div id="ai-suggestion" class="suggestion-card" hidden></div>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section data-view="orders" class="view" hidden>
+      <div class="view-header">
+        <h1>My Orders</h1>
+      </div>
+      <div id="orders-container" class="orders-list">
+        <p class="empty-state">No orders yet. Start shopping!</p>
+      </div>
+    </section>
+
+    <!-- Cart -->
+    <section data-view="cart" class="view" hidden>
+      <div class="view-header">
+        <h1>Shopping Cart</h1>
+      </div>
+      <div id="cart-container" class="cart-content">
+        <p class="empty-state">Your cart is empty</p>
+      </div>
+      <div id="cart-summary" class="cart-summary" hidden>
+        <div class="summary-row">
+          <span>Total:</span>
+          <span class="total-price" id="total-price">0</span>
+        </div>
+        <button id="checkout-btn" class="btn btn-primary btn-large">Proceed to Checkout</button>
+      </div>
+    </section>
+
+    <!-- Account -->
+    <section data-view="account" class="view" hidden>
+      <div class="view-header">
+        <h1>Account</h1>
+      </div>
+      <div id="login-form" class="auth-form">
+        <h2>Login / Sign Up</h2>
+        <input type="text" id="username-input" placeholder="Enter your username" class="input">
+        <button id="login-btn" class="btn btn-primary">Login</button>
+      </div>
+      <div id="account-info" class="account-info" hidden>
+        <div class="user-card">
+          <h2>Profile</h2>
+          <p><strong>Username:</strong> <span id="profile-username"></span></p>
+          <p><strong>Coins:</strong> <span id="profile-coins"></span> 💰</p>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/recipes.js"></script>
+  <script src="js/fridge.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/order.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
