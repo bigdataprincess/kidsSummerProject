@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Learning Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    .project-card.alex .project-header {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ffa366 100%);
+    }
+
+    .project-card.bcgold .project-header {
+      background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    }
+
+    .project-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .project-desc {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .project-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .project-features li {
+      padding: 0.4rem 0;
+      color: #555;
+    }
+
+    .project-features li:before {
+      content: "✓ ";
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    .project-card.bcgold .project-features li:before {
+      color: #ff6b6b;
+    }
+
+    .visit-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .project-card.alex .visit-btn {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ffa366 100%);
+    }
+
+    .project-card.bcgold .visit-btn {
+      background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    }
+
+    .visit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    .footer {
+      text-align: center;
+      color: white;
+      margin-top: 2rem;
+      opacity: 0.9;
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .built-with {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .badge {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>🌟 Summer Learning Projects</h1>
+      <p>Built with HTML, CSS, JavaScript & AI</p>
+      <div>
+        <span class="badge">👨‍💻 Web Development</span>
+        <span class="badge">🤖 AI Integration</span>
+        <span class="badge">📱 Responsive Design</span>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects">
+      <!-- Alexander's Photo Store -->
+      <div class="project-card alex">
+        <div class="project-header">📸</div>
+        <div class="project-content">
+          <div class="project-title">Alexander's Photo Store</div>
+          <p class="project-desc">
+            A fun online store where you can browse photos, play games, draw your own pictures, and buy frames with pretend money!
+          </p>
+          <ul class="project-features">
+            <li>Browse & purchase photos</li>
+            <li>Draw & save your art</li>
+            <li>Play games to earn coins</li>
+            <li>Frame your favorites</li>
+            <li>Admin dashboard</li>
+          </ul>
+          <a href="alex_store/" class="visit-btn">Visit Store →</a>
+        </div>
+      </div>
+
+      <!-- BcGold Restaurant -->
+      <div class="project-card bcgold">
+        <div class="project-header">🍳</div>
+        <div class="project-content">
+          <div class="project-title">BcGold Restaurant</div>
+          <p class="project-desc">
+            Discover delicious recipes, manage your kitchen inventory, and order food with AI-powered recipe suggestions!
+          </p>
+          <ul class="project-features">
+            <li>Browse 12+ recipes</li>
+            <li>Smart fridge inventory</li>
+            <li>AI recipe suggestions</li>
+            <li>Shopping cart</li>
+            <li>Order management</li>
+          </ul>
+          <a href="ralp_recipe_app/" class="visit-btn">Visit Restaurant →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>💡 Made as summer learning projects</p>
+      <p class="built-with">Built with ❤️ using HTML5 • CSS3 • JavaScript • Claude AI</p>
+    </div>
+  </div>
+</body>
+</html>
