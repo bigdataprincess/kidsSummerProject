@@ -368,6 +368,14 @@ html, body {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .recipe-info {

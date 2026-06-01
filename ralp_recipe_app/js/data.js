@@ -7,6 +7,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 20,
     icon: '🍝',
+    image: './BcGold Cash/9.png',
     ingredients: ['pasta', 'eggs', 'bacon', 'cheese', 'salt', 'black pepper'],
     instructions: [
       'Boil pasta in salted water until al dente',
@@ -25,6 +26,7 @@ const recipes = [
     difficulty: 'Easy',
     prepTime: 15,
     icon: '🍅',
+    image: './BcGold Cash/10.png',
     ingredients: ['tomatoes', 'onion', 'garlic', 'cream', 'salt', 'pepper'],
     instructions: [
       'Sauté onion and garlic in a pot',
@@ -43,6 +45,7 @@ const recipes = [
     difficulty: 'Easy',
     prepTime: 25,
     icon: '🌮',
+    image: './BcGold Cash/11.png',
     ingredients: ['chicken', 'tortillas', 'lettuce', 'tomato', 'cheese', 'sour cream'],
     instructions: [
       'Cook and season chicken with spices',
@@ -61,6 +64,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 30,
     icon: '🍜',
+    image: './BcGold Cash/12.png',
     ingredients: ['rice noodles', 'shrimp', 'egg', 'peanuts', 'lemon', 'soy sauce'],
     instructions: [
       'Soak rice noodles in water',
@@ -79,6 +83,7 @@ const recipes = [
     difficulty: 'Hard',
     prepTime: 45,
     icon: '🍛',
+    image: './BcGold Cash/13.png',
     ingredients: ['chicken', 'butter', 'cream', 'tomato', 'garlic', 'ginger', 'spices'],
     instructions: [
       'Marinate chicken in spices and yogurt',
@@ -97,6 +102,7 @@ const recipes = [
     difficulty: 'Easy',
     prepTime: 10,
     icon: '🥗',
+    image: './BcGold Cash/14.png',
     ingredients: ['romaine lettuce', 'parmesan cheese', 'croutons', 'egg', 'lemon', 'olive oil'],
     instructions: [
       'Wash and chop romaine lettuce',
@@ -115,6 +121,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 35,
     icon: '🍕',
+    image: './BcGold Cash/15.png',
     ingredients: ['flour', 'tomato sauce', 'mozzarella', 'basil', 'olive oil', 'salt'],
     instructions: [
       'Prepare pizza dough',
@@ -133,6 +140,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 25,
     icon: '🥘',
+    image: './BcGold Cash/16.png',
     ingredients: ['chicken', 'bell pepper', 'carrots', 'soy sauce', 'garlic', 'ginger', 'rice'],
     instructions: [
       'Cook rice first',
@@ -151,6 +159,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 20,
     icon: '🌮',
+    image: './BcGold Cash/17.png',
     ingredients: ['white fish', 'tortillas', 'cabbage', 'lime', 'cilantro', 'avocado'],
     instructions: [
       'Season and grill fish',
@@ -169,6 +178,7 @@ const recipes = [
     difficulty: 'Easy',
     prepTime: 40,
     icon: '🍫',
+    image: './BcGold Cash/18.png',
     ingredients: ['flour', 'butter', 'chocolate', 'eggs', 'sugar', 'vanilla'],
     instructions: [
       'Melt butter and chocolate together',
@@ -187,6 +197,7 @@ const recipes = [
     difficulty: 'Hard',
     prepTime: 40,
     icon: '🍚',
+    image: './BcGold Cash/19.png',
     ingredients: ['arborio rice', 'mushrooms', 'butter', 'parmesan', 'white wine', 'broth'],
     instructions: [
       'Sauté mushrooms and set aside',
@@ -205,6 +216,7 @@ const recipes = [
     difficulty: 'Medium',
     prepTime: 30,
     icon: '🌯',
+    image: './BcGold Cash/20.png',
     ingredients: ['chickpeas', 'pita bread', 'tomato', 'cucumber', 'tahini', 'parsley'],
     instructions: [
       'Soak and blend chickpeas with spices',
@@ -215,6 +227,158 @@ const recipes = [
       'Assemble wrap and serve with sauce'
     ],
     cost: 7
+  },
+  {
+    id: 'pepper-soup',
+    name: 'Pepper Soup',
+    cuisine: 'Nigerian',
+    difficulty: 'Easy',
+    prepTime: 20,
+    icon: '🌶️',
+    image: './BcGold Cash/1.png',
+    ingredients: ['beef', 'scotch bonnet peppers', 'onions', 'garlic', 'ginger', 'spices', 'water', 'salt'],
+    instructions: [
+      'Boil beef with spices until tender',
+      'Finely chop scotch bonnet peppers and onions',
+      'Add peppers, onions, and garlic to broth',
+      'Simmer for 10 minutes',
+      'Season with salt and ginger',
+      'Serve hot as an appetizer'
+    ],
+    cost: 8
+  },
+  {
+    id: 'egusi-soup',
+    name: 'Egusi Soup',
+    cuisine: 'Nigerian',
+    difficulty: 'Medium',
+    prepTime: 45,
+    icon: '🍲',
+    image: './BcGold Cash/2.png',
+    ingredients: ['egusi (melon seeds)', 'spinach', 'beef', 'onions', 'palm oil', 'cloves', 'locust beans', 'salt'],
+    instructions: [
+      'Grind egusi seeds into powder',
+      'Heat palm oil in a pot',
+      'Fry onions in palm oil',
+      'Add beef and cook until brown',
+      'Mix egusi powder with water and add to pot',
+      'Add spinach and spices, simmer 20 minutes'
+    ],
+    cost: 9
+  },
+  {
+    id: 'fufu-soup',
+    name: 'Fufu with Soup',
+    cuisine: 'Nigerian',
+    difficulty: 'Hard',
+    prepTime: 45,
+    icon: '🍲',
+    image: './BcGold Cash/3.png',
+    ingredients: ['plantain', 'cassava', 'water', 'palm oil', 'leafy vegetables', 'fish', 'onions', 'spices'],
+    instructions: [
+      'Peel and boil plantain and cassava',
+      'Pound until smooth using mortar and pestle',
+      'Make palm soup with vegetables and fish',
+      'Heat soup until ready',
+      'Serve fufu balls alongside hot soup',
+      'Dip fufu in soup while eating'
+    ],
+    cost: 10
+  },
+  {
+    id: 'eba-veg-soup',
+    name: 'Eba with Vegetable Soup',
+    cuisine: 'Nigerian',
+    difficulty: 'Easy',
+    prepTime: 25,
+    icon: '🥄',
+    image: './BcGold Cash/4.png',
+    ingredients: ['gari (cassava granules)', 'vegetables', 'onions', 'palm oil', 'stockfish', 'pepper', 'salt', 'water'],
+    instructions: [
+      'Boil water and add salt',
+      'Pour hot water slowly into gari while stirring',
+      'Cook vegetable soup with palm oil and stockfish',
+      'Add onions and peppers to soup',
+      'Serve eba on one side, soup on the other',
+      'Enjoy by molding eba and dipping in soup'
+    ],
+    cost: 7
+  },
+  {
+    id: 'jollof-rice',
+    name: 'Jollof Rice',
+    cuisine: 'Nigerian',
+    difficulty: 'Medium',
+    prepTime: 35,
+    icon: '🍚',
+    image: './BcGold Cash/5.png',
+    ingredients: ['rice', 'tomatoes', 'tomato paste', 'onions', 'peppers', 'butter', 'chicken stock', 'salt'],
+    instructions: [
+      'Blend tomatoes and peppers',
+      'Fry onions in butter until golden',
+      'Add tomato paste and cook 5 minutes',
+      'Add blended tomatoes and tomato mixture',
+      'Add rice and chicken stock',
+      'Cover and cook until rice is done'
+    ],
+    cost: 9
+  },
+  {
+    id: 'akara',
+    name: 'Akara (Bean Cakes)',
+    cuisine: 'Nigerian',
+    difficulty: 'Medium',
+    prepTime: 30,
+    icon: '🤎',
+    image: './BcGold Cash/6.png',
+    ingredients: ['blackeyed beans', 'onions', 'peppers', 'eggs', 'oil for frying', 'salt', 'ginger', 'garlic'],
+    instructions: [
+      'Soak blackeyed beans and remove skin',
+      'Blend beans with onions, peppers, and spices',
+      'Beat in eggs to create batter',
+      'Heat oil in a deep pot',
+      'Scoop batter and drop into hot oil',
+      'Fry until golden brown on both sides'
+    ],
+    cost: 6
+  },
+  {
+    id: 'suya',
+    name: 'Suya (Grilled Meat)',
+    cuisine: 'Nigerian',
+    difficulty: 'Medium',
+    prepTime: 40,
+    icon: '🍖',
+    image: './BcGold Cash/7.png',
+    ingredients: ['beef', 'suya spice powder', 'ginger', 'garlic', 'oil', 'salt', 'onions', 'skewers'],
+    instructions: [
+      'Cut beef into chunks and thread on skewers',
+      'Season beef with salt and pepper',
+      'Mix suya spice with oil to create paste',
+      'Rub spice mixture on beef',
+      'Grill over hot charcoal or fire',
+      'Turn frequently until cooked thoroughly'
+    ],
+    cost: 11
+  },
+  {
+    id: 'nigerian-beef-stew',
+    name: 'Nigerian Beef Stew',
+    cuisine: 'Nigerian',
+    difficulty: 'Easy',
+    prepTime: 40,
+    icon: '🍛',
+    image: './BcGold Cash/8.png',
+    ingredients: ['beef', 'tomatoes', 'tomato paste', 'onions', 'peppers', 'butter', 'bay leaves', 'spices'],
+    instructions: [
+      'Cut beef into chunks',
+      'Fry onions in butter until soft',
+      'Add beef and brown on all sides',
+      'Add tomato paste and cook 2 minutes',
+      'Add blended tomatoes and peppers',
+      'Simmer 30 minutes until beef is tender'
+    ],
+    cost: 8
   }
 ];
 

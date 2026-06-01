@@ -74,7 +74,7 @@ const recipeManager = {
     card.className = 'recipe-card';
 
     card.innerHTML = `
-      <div class="recipe-image">${recipe.icon}</div>
+      <div class="recipe-image">${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}">` : recipe.icon}</div>
       <div class="recipe-info">
         <div class="recipe-name">${recipe.name}</div>
         <div class="recipe-meta">
@@ -130,7 +130,7 @@ const recipeManager = {
 
     content.innerHTML = `
       <div class="recipe-detail">
-        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">${recipe.icon}</div>
+        ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">` : `<div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">${recipe.icon}</div>`}
         <h2>${recipe.name}</h2>
         <div class="recipe-detail-meta">
           <div class="meta-item">
